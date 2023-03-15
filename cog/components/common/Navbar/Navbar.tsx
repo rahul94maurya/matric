@@ -39,38 +39,42 @@ const Navbar = () => {
             <div className='main-container d-flex '>
                 <div className='sidebar' id='side_nav' ref={toggleSwitch}>
                     <div className='header-box px-2 pt-3 pb-4 d-flex justify-content-between'>
-                        <h1 className='fs-4 fw-bold ms-3'><span className='text-white'>thinkbridge</span></h1>
+                        {/* <h1 className='fs-4 fw-bold ms-3'><span className='text-white'>thinkbridge</span></h1> */}
+                        <div className='navbar-brand me-auto  ms-3'>
+                        <span className='fw-bold text-white fs-4 '>think</span>
+                        <span className='text-white fs-5'>bridge</span>
+                    </div>
                         <span className='btn d-lg-none d-block close-btn  px-1 py-0  navbar-toggler-icon text-white navbar-toggler-icon' onClick={onRemoveClick}>X</span>
 
                     </div>
 
-                    <ul className='list-unstyled px-2'>
+                    <ul className='list-unstyled'>
                         <li className={currentLocation == 'dashboard' ? 'active' : ''}>
-                            <Link to="dashboard" className="text-decoration-none px-3 py-2 d-block">Teams</Link>
+                            <Link to="dashboard" className="text-decoration-none p-3 d-block">Teams</Link>
                         </li>
                         <li className={currentLocation == 'addEditTeams' ? 'active' : ''}>
-                            <Link to="addEditTeams" className="text-decoration-none px-3 py-2 d-block">AddEditTeams</Link>
+                            <Link to="addEditTeams" className="text-decoration-none d-block">AddEditTeams</Link>
                         </li>
                         <li className={currentLocation == 'reporting' ? 'active' : ''}>
-                            <Link to="reporting" className="text-decoration-none px-3 py-2 d-block">Reporting To</Link>
+                            <Link to="reporting" className="text-decoration-none  d-block">Reporting To</Link>
                         </li>
                         <li className={currentLocation == 'addEditMatric' ? 'active' : ''}>
-                            <Link to="addEditMatric" className="text-decoration-none px-3 py-2 d-block">Add/Edit Matric</Link>
+                            <Link to="addEditMatric" className="text-decoration-none  d-block">Add/Edit Matric</Link>
                         </li>
                         <li className={currentLocation == 'report' ? 'active' : ''}>
-                            <Link to="report" className="text-decoration-none px-3 py-2 d-block">Report</Link>
+                            <Link to="report" className="text-decoration-none  d-block">Report</Link>
                         </li>
                         <li className={currentLocation == 'planEditSprint' ? 'active' : ''}>
-                            <Link to="planEditSprint" className="text-decoration-none px-3 py-2 d-block">Plan/Edit Sprint</Link>
+                            <Link to="planEditSprint" className="text-decoration-none  d-block">Plan/Edit Sprint</Link>
                         </li>
                         <li className={currentLocation == 'addEditTickets' ? 'active' : ''}>
-                            <Link to="addEditTickets" className="text-decoration-none px-3 py-2 d-block">Add/Edit Tickets</Link>
+                            <Link to="addEditTickets" className="text-decoration-none  d-block">Add/Edit Tickets</Link>
                         </li>
                         <li className={currentLocation == 'selfPerformance' ? 'active' : ''}>
-                            <Link to="selfPerformance" className="text-decoration-none px-3 py-2 d-block">SelfPerformance</Link>
+                            <Link to="selfPerformance" className="text-decoration-none  d-block">SelfPerformance</Link>
                         </li>
                         <li className={currentLocation == 'coWorkers' ? 'active' : ''}>
-                            <Link to="coWorkers" className="text-decoration-none px-3 py-2 d-block">Rate your Co-Worker</Link>
+                            <Link to="coWorkers" className="text-decoration-none d-block">Rate your Co-Worker</Link>
                         </li>
                     </ul>
 
@@ -93,7 +97,7 @@ const Navbar = () => {
                             </button>
                             <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                                 <ul className="navbar-nav  mb-2 mb-lg-0">
-                                    <li className="nav-item d-flex">
+                                    <li className="nav-item d-flex response">
                                         <Link to="" className='nav-link active common-link'>Notification</Link>
                                         <Link to="" className='nav-link active common-link' onClick={handleLogout}>Logout</Link>
                                     </li>
